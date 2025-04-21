@@ -1,0 +1,20 @@
+{
+  "name": "Jaswanth Reddy Bhimavarapu",
+  "email": "bhjaswanthreddy@gmail.com",
+  "location": "Saint Louis, Missouri",
+  "linkedin": "https://www.linkedin.com/in/bhjaswanthreddy",
+  "github": "https://github.com/bhjaswanthreddy",
+  "tagline": "Masters in Information Systems | Full-stack Dev | AI + Web Enthusiast",
+  "education": [
+    {
+      "degree": "Masters in Information Systems",
+      "school": "Saint Louis University",
+      "date": "2023 – 2025"
+    },
+    {
+      "degree": "Bachelor of Technology, Computer Science",
+      "school": "GITAM University",
+      "date": "2019 – 2023"
+    }
+  ]
+}

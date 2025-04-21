@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Fault Diagnosis in the Electric Power System",
+    "tech": ["Python", "QDA", "Voting Classifier"],
+    "summary": "Predicted faults using conductor/voltage datasets. Achieved 96.5% accuracy using QDA and ensemble techniques."
+  },
+  {
+    "title": "Generative AI and Business Intelligence",
+    "tech": ["AI", "BI", "Research"],
+    "summary": "Studied how GenAI enhances BI workflows. Identified opportunities for analysts to adopt AI tools."
+  },
+  {
+    "title": "Dynamic Marketing Solutions Analysis",
+    "tech": ["Analytics", "Business Process"],
+    "summary": "Analyzed customer engagement strategies and provided insights through detailed reporting."
+  },
+  {
+    "title": "Lab Equipment Management System",
+    "tech": ["React", "Node.js", "MongoDB"],
+    "summary": "Built a full-stack app for university labs. Supported real-time equipment tracking and CRUD operations with 98% uptime."
+  }
+]

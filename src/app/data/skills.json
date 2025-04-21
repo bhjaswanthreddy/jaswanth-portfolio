@@ -1,0 +1,17 @@
+{
+  "Programming Languages": [
+    "Java",
+    "C",
+    "C++",
+    "Python",
+    "JavaScript",
+    "SQL",
+    "MATLAB",
+    "ARM Assembly"
+  ],
+  "Frontend": ["React", "Tailwind CSS"],
+  "Backend & DB": ["Node.js", "MongoDB", "SQL"],
+  "Tools & DevOps": ["Linux", "Docker", "Jenkinsfile", "Git"],
+  "Cloud & Infra": ["Google Cloud Platform"],
+  "Methodologies": ["Agile Framework", "CI/CD"]
+}
