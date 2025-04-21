@@ -4,14 +4,14 @@ Welcome to my interactive developer portfolio – a creative blend of **terminal
 
 ---
 
-## ✅ Week 1 Progress: Foundation & CLI Experience
+## Week 1 Progress: Foundation & CLI Experience
 
-### 🧱 Stack Setup
+### Stack Setup
 
 - Initialized the project using **Next.js (App Router)** with **TypeScript** and **Tailwind CSS**
 - Installed and configured `@react-three/fiber` and `@react-three/drei` for lightweight 3D rendering
 
-### 💻 Command-Line Homepage
+### Command-Line Homepage
 
 - Built a terminal-style landing screen that types out:
   jaswanth@portfolio:~$ show portfolio
@@ -19,12 +19,12 @@ Welcome to my interactive developer portfolio – a creative blend of **terminal
 - Simulated typing animation with a blinking cursor
 - Triggered a transition into the **3D galaxy view** once the command executes
 
-### 🌌 Cosmic Canvas Setup
+### Cosmic Canvas Setup
 
 - Integrated a minimal **3D starfield** using `Stars` from `drei`
 - Set up orbit controls and ambient light for a smooth visual space
 
-### 👨‍🎓 About Section (Data-Driven)
+### About Section (Data-Driven)
 
 - Created a `data/about.json` file to store resume-based details
 - Built an `AboutMe.tsx` component to render my name, tagline, education, and contact links
@@ -32,19 +32,19 @@ Welcome to my interactive developer portfolio – a creative blend of **terminal
 
 ---
 
-## 🔭 Week 2 & Beyond: What’s Next?
+## Week 2 & Beyond: What’s Next?
 
-### 🌠 Constellation-Based Navigation
+### Constellation-Based Navigation
 
 - Replace modal with **interactive star nodes** representing Projects, Skills, About
 - Click on a star → fade-in a glowing info modal
 
-### 📦 Dynamic Data Loaders
+### Dynamic Data Loaders
 
 - `projects.json`: Details like Fault Diagnosis, Lab Equipment Tracker
 - `skills.json`: Show orbiting skill icons or badges with categories
 
-### 🧠 Features in Pipeline
+### Features in Pipeline
 
 - AI Easter Egg: A secret CLI command to launch "JasBot"
 - Smooth animations using Framer Motion or Drei transitions
@@ -54,13 +54,8 @@ Welcome to my interactive developer portfolio – a creative blend of **terminal
 
 ---
 
-## 💡 Why This Format?
+## Why This Format?
 
 As someone passionate about both **engineering** and **user experience**, I wanted this portfolio to feel like a journey—not just a static page. From my roots in C++ and Python to real-world ML applications and cloud deployments, this design embodies both the logic and creativity of my path.
 
-Built by Jaswanth Reddy Bhimavarapu 👨‍🚀
-# jaswanth-portfolio
-# jaswanth-portfolio
-# jaswanth-portfolio
-# jaswanth-portfolio
-# jaswanth-portfolio
+Built by Jaswanth Reddy Bhimavarapu 👨
