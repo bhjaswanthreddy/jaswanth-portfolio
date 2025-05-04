@@ -10,26 +10,39 @@ import AboutMe from "./AboutMe";
 import ProjectCard from "./ProjectCard";
 import SkillCard from "./SkillCard";
 
+import ExperienceSection from "./ExperienceSection";
+import EducationSection from "./EducationSection";
+import AchievementsSection from "./AchievementsSection";
+import CertificationsSection from "./CertificationsSection";
+import ContactSection from "./ContactSection";
+
 import projects from "../data/projects.json";
 import skills from "../data/skills.json";
 
 export default function CosmicCanvas() {
   const [activeSection, setActiveSection] = useState<null | string>(null);
 
-  // 🌟 Star sections to render
-  const starSections: { label: string; id: string }[] = [
-    { label: "About", id: "About" },
-    { label: "Projects", id: "Projects" },
-    { label: "Skills", id: "Skills" },
-    // Add more here like: { label: "Contact", id: "Contact" }
+  const starSections: { label: string; id: string; planetType: string }[] = [
+    { label: "About", id: "About", planetType: "earth" },
+    { label: "Experience", id: "Experience", planetType: "mars" },
+    { label: "Projects", id: "Projects", planetType: "jupiter" },
+    { label: "Skills", id: "Skills", planetType: "saturn" },
+    { label: "Education", id: "Education", planetType: "neptune" },
+    { label: "Achievements", id: "Achievements", planetType: "venus" },
+    { label: "Certifications", id: "Certifications", planetType: "pluto" },
+    { label: "Contact", id: "Contact", planetType: "mercury" },
   ];
 
   return (
     <div className="relative w-screen h-screen overflow-hidden">
-      {/* ⭐ 3D Canvas Layer */}
       <Canvas
         camera={{ position: [0, 0, 10], fov: 75 }}
-        style={{ position: "absolute", inset: 0, zIndex: 0 }}
+        style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 0,
+          touchAction: "none",
+        }}
       >
         <ambientLight intensity={0.5} />
         <OrbitControls />
@@ -42,7 +55,6 @@ export default function CosmicCanvas() {
           fade
         />
 
-        {/* 🔭 Render stars in circular/spiral layout */}
         {starSections.map((star, index) => {
           const radius = 4;
           const angle = (index / starSections.length) * Math.PI * 2;
@@ -54,6 +66,7 @@ export default function CosmicCanvas() {
             <ClickableStar
               key={star.id}
               label={star.label}
+              planetType={star.planetType}
               position={[x, y, z]}
               onClick={() => setActiveSection(star.id)}
             />
@@ -61,7 +74,6 @@ export default function CosmicCanvas() {
         })}
       </Canvas>
 
-      {/* 💫 Modal Overlay Layer */}
       {activeSection && (
         <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/60 backdrop-blur-md">
           <SectionModal onClose={() => setActiveSection(null)}>
@@ -94,6 +106,12 @@ export default function CosmicCanvas() {
                 ))}
               </div>
             )}
+
+            {activeSection === "Experience" && <ExperienceSection />}
+            {activeSection === "Education" && <EducationSection />}
+            {activeSection === "Achievements" && <AchievementsSection />}
+            {activeSection === "Certifications" && <CertificationsSection />}
+            {activeSection === "Contact" && <ContactSection />}
           </SectionModal>
         </div>
       )}
