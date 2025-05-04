@@ -1,9 +1,10 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Html } from "@react-three/drei";
+import { Html, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
+import * as THREE from "three";
 
 interface ClickableStarProps {
   position: [number, number, number];
@@ -22,30 +23,8 @@ export default function ClickableStar({
   const groupRef = useRef<THREE.Group>(null);
   const [hovered, setHovered] = useState(false);
 
-  const colorMap: Record<string, string> = {
-    earth: "#3fa9f5",
-    mars: "#d24d4d",
-    saturn: "#d8c271",
-    neptune: "#406dce",
-    venus: "#e3b062",
-    mercury: "#999999",
-    jupiter: "#f5c07a",
-    pluto: "#a0a0ff",
-  };
-
-  const emissiveMap: Record<string, string> = {
-    earth: "#1c4a6d",
-    mars: "#992222",
-    saturn: "#87743a",
-    neptune: "#1e3b88",
-    venus: "#b28640",
-    mercury: "#666666",
-    jupiter: "#c4903c",
-    pluto: "#6666ff",
-  };
-
-  const color = colorMap[planetType] || "#00ffff";
-  const emissive = emissiveMap[planetType] || "#002233";
+  // 🌍 Load texture dynamically
+  const texture = useTexture(`/textures/${planetType}.jpg`);
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
@@ -64,6 +43,7 @@ export default function ClickableStar({
 
   return (
     <group ref={groupRef} position={position}>
+      {/* 🌐 Planet Sphere */}
       <mesh
         ref={meshRef}
         onClick={(e) => {
@@ -73,14 +53,29 @@ export default function ClickableStar({
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
       >
-        <sphereGeometry args={[0.6, 32, 32]} />
+        {/* 🟠 Increased planet size */}
+        <sphereGeometry args={[1.0, 64, 64]} />
         <meshStandardMaterial
-          color={color}
-          emissive={emissive}
-          emissiveIntensity={0.6}
+          map={texture}
+          emissive={hovered ? "#ffffff" : "#111111"}
+          emissiveIntensity={0.5}
         />
       </mesh>
 
+      {/* 🪐 Saturn Ring */}
+      {planetType === "saturn" && (
+        <mesh rotation={[Math.PI / 2, 0, 0]}>
+          <ringGeometry args={[1.2, 1.7, 64]} />
+          <meshBasicMaterial
+            color="gold"
+            transparent
+            opacity={0.5}
+            side={THREE.DoubleSide}
+          />
+        </mesh>
+      )}
+
+      {/* 🏷️ Label */}
       <Html center distanceFactor={10}>
         <div
           onClick={(e) => {
