@@ -23,7 +23,6 @@ export default function ClickableStar({
   const groupRef = useRef<THREE.Group>(null);
   const [hovered, setHovered] = useState(false);
 
-  // 🌍 Load texture dynamically
   const texture = useTexture(`/textures/${planetType}.jpg`);
 
   useFrame(({ clock }) => {
@@ -32,7 +31,7 @@ export default function ClickableStar({
     if (meshRef.current && groupRef.current) {
       meshRef.current.rotation.y += 0.005;
       groupRef.current.position.y =
-        position[1] + Math.sin(t + position[0]) * 0.2;
+        position[1] + Math.sin(t + position[0]) * 0.3;
 
       const material = meshRef.current.material as THREE.MeshStandardMaterial;
       material.emissiveIntensity = hovered
@@ -43,7 +42,6 @@ export default function ClickableStar({
 
   return (
     <group ref={groupRef} position={position}>
-      {/* 🌐 Planet Sphere */}
       <mesh
         ref={meshRef}
         onClick={(e) => {
@@ -53,8 +51,8 @@ export default function ClickableStar({
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
       >
-        {/* 🟠 Increased planet size */}
-        <sphereGeometry args={[1.0, 64, 64]} />
+        {/* Increased size from 1.0 to 1.8 */}
+        <sphereGeometry args={[1.8, 64, 64]} />
         <meshStandardMaterial
           map={texture}
           emissive={hovered ? "#ffffff" : "#111111"}
@@ -62,10 +60,10 @@ export default function ClickableStar({
         />
       </mesh>
 
-      {/* 🪐 Saturn Ring */}
+      {/* Saturn ring */}
       {planetType === "saturn" && (
         <mesh rotation={[Math.PI / 2, 0, 0]}>
-          <ringGeometry args={[1.2, 1.7, 64]} />
+          <ringGeometry args={[2.2, 3.1, 64]} />
           <meshBasicMaterial
             color="gold"
             transparent
@@ -75,14 +73,13 @@ export default function ClickableStar({
         </mesh>
       )}
 
-      {/* 🏷️ Label */}
       <Html center distanceFactor={10}>
         <div
           onClick={(e) => {
             e.stopPropagation();
             onClick();
           }}
-          className="text-white text-sm bg-black/80 px-2 py-1 rounded cursor-pointer select-none hover:bg-white/10 transition"
+          className="text-white text-lg font-semibold bg-black/80 px-3 py-1.5 rounded cursor-pointer select-none hover:bg-white/10 transition"
         >
           {label}
         </div>

@@ -31,7 +31,7 @@ export default function CosmicCanvas() {
   return (
     <div className="relative w-screen h-screen overflow-hidden">
       <Canvas
-        camera={{ position: [0, 0, 30], fov: 60 }}
+        camera={{ position: [0, 20, 30], fov: 40 }} // raised + tilted
         style={{ position: "absolute", inset: 0, zIndex: 0 }}
       >
         {/* 🌌 Lighting */}
@@ -60,7 +60,7 @@ export default function CosmicCanvas() {
           if (star.planetType === "sun") {
             x = y = z = 0;
           } else {
-            const radius = 6 + index * 2;
+            const radius = 8 + index * 3; // was 6 + index * 2
             const angle = (index / (starSections.length - 1)) * Math.PI * 2;
             x = radius * Math.cos(angle);
             z = radius * Math.sin(angle);
