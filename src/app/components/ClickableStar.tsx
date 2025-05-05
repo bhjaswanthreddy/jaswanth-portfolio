@@ -55,8 +55,8 @@ export default function ClickableStar({
         <sphereGeometry args={[1.8, 64, 64]} />
         <meshStandardMaterial
           map={texture}
-          emissive={hovered ? "#ffffff" : "#111111"}
-          emissiveIntensity={0.5}
+          emissive={"#222222"}
+          emissiveIntensity={hovered ? 0.9 : 0.4}
         />
       </mesh>
 
