@@ -59,8 +59,9 @@ export default function Home() {
             🤖 JasBot Activated
           </h1>
           <p className="text-teal-300 text-lg">
-            Hey human, I’m Jaswanth's AI twin.
+            Hey human, I&apos;m Jaswanth&apos;s AI twin.
           </p>
+
           <p className="text-white/70 text-sm">
             Conversational interface coming soon...
           </p>
