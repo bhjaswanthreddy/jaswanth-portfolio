@@ -11,6 +11,7 @@ import SkillCard from "./SkillCard";
 import projects from "../data/projects.json";
 import skills from "../data/skills.json";
 import * as THREE from "three";
+import SunContent from "./SunContent";
 
 export default function CosmicCanvas() {
   const [activeSection, setActiveSection] = useState<null | string>(null);
@@ -112,6 +113,7 @@ export default function CosmicCanvas() {
       {activeSection && (
         <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/60 backdrop-blur-md">
           <SectionModal onClose={() => setActiveSection(null)}>
+            {activeSection === "Sun" && <SunContent />}
             {activeSection === "About" && <AboutMe />}
             {activeSection === "Projects" && (
               <div className="w-full max-h-[70vh] overflow-y-auto space-y-4 pr-2">
