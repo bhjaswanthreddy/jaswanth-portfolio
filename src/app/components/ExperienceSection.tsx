@@ -3,9 +3,7 @@ export default function ExperienceSection() {
     <div className="text-white">
       <h2 className="text-xl font-bold mb-2">🧑‍💼 Experience</h2>
       <ul className="list-disc list-inside space-y-1">
-        <li>Real Variable – Associate Business Analyst</li>
-        <li>Xcrino Business Solutions – Data Scientist</li>
-        <li>BASF (Client) – AI/ML Implementation</li>
+        <li>VERZEO – Data Analyst Intern (Apr 2022 – Aug 2022)</li>
       </ul>
     </div>
   );
