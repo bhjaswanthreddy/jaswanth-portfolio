@@ -1,22 +1,32 @@
 [
   {
-    "title": "Fault Diagnosis in the Electric Power System",
+    "title": "Fault Diagnosis in Electric Power Systems",
     "tech": ["Python", "QDA", "Voting Classifier"],
-    "summary": "Predicted faults using conductor/voltage datasets. Achieved 96.5% accuracy using QDA and ensemble techniques."
+    "summary": "Predictive analytics system identifying faults with 96.5% accuracy from voltage and current data."
   },
   {
-    "title": "Generative AI and Business Intelligence",
-    "tech": ["AI", "BI", "Research"],
-    "summary": "Studied how GenAI enhances BI workflows. Identified opportunities for analysts to adopt AI tools."
-  },
-  {
-    "title": "Dynamic Marketing Solutions Analysis",
-    "tech": ["Analytics", "Business Process"],
-    "summary": "Analyzed customer engagement strategies and provided insights through detailed reporting."
-  },
-  {
-    "title": "Lab Equipment Management System",
+    "title": "Lab Equipment Manager",
     "tech": ["React", "Node.js", "MongoDB"],
-    "summary": "Built a full-stack app for university labs. Supported real-time equipment tracking and CRUD operations with 98% uptime."
+    "summary": "Role-based inventory platform for university labs with REST APIs and authentication; scaled to 1,000+ assets and maintained 98% uptime."
+  },
+  {
+    "title": "Object Localization with Deep Learning",
+    "tech": ["TensorFlow", "KNN", "CNN"],
+    "summary": "Computer vision pipeline detecting object locations with 100% precision on a 5,000-image dataset."
+  },
+  {
+    "title": "Cloud Career Navigator",
+    "tech": ["Streamlit", "AWS", "Pandas"],
+    "summary": "Analytics web platform for resume-job matching and salary insights with a polished glassmorphism UI."
+  },
+  {
+    "title": "Housing Price Prediction App",
+    "tech": ["Python", "Gradio", "Scikit-learn"],
+    "summary": "Interactive app predicting California housing prices using linear regression with an R² score of 62%."
+  },
+  {
+    "title": "Dynamic Marketing Analysis",
+    "tech": ["BI", "Data Pipeline"],
+    "summary": "Unified CRM and campaign data to create regional conversion dashboards and automated reporting, reducing latency by 50%."
   }
 ]

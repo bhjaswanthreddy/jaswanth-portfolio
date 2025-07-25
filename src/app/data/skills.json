@@ -1,17 +1,16 @@
 {
-  "Programming Languages": [
-    "Java",
-    "C",
-    "C++",
-    "Python",
-    "JavaScript",
-    "SQL",
-    "MATLAB",
-    "ARM Assembly"
-  ],
-  "Frontend": ["React", "Tailwind CSS"],
-  "Backend & DB": ["Node.js", "MongoDB", "SQL"],
-  "Tools & DevOps": ["Linux", "Docker", "Jenkinsfile", "Git"],
-  "Cloud & Infra": ["Google Cloud Platform"],
-  "Methodologies": ["Agile Framework", "CI/CD"]
+  "Languages": ["JavaScript", "TypeScript", "Python", "SQL", "Java"],
+  "Frameworks": ["React", "Node.js", "Express", "TensorFlow"],
+  "Cloud/DevOps": ["AWS (S3, EC2)", "Docker", "Jenkins", "Streamlit"],
+  "Databases": ["MongoDB", "PostgreSQL"],
+  "ML & Data": ["Scikit-learn", "Pandas", "Plotly", "Matplotlib"],
+  "Tools": ["Git", "Gradio", "n8n", "Figma", "Postman"],
+  "Concepts": [
+    "AI SaaS",
+    "REST APIs",
+    "Data Pipelines",
+    "Agile",
+    "Vector Search",
+    "UX Prototyping"
+  ]
 }
