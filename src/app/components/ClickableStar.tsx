@@ -79,7 +79,7 @@ export default function ClickableStar({
             e.stopPropagation();
             onClick();
           }}
-          className="text-white text-lg font-semibold bg-black/80 px-3 py-1.5 rounded cursor-pointer select-none hover:bg-white/10 transition"
+          className="text-white text-lg font-semibold bg-black/70 px-3 py-1.5 rounded-md cursor-pointer select-none hover:bg-white/10 hover:shadow-inner transition"
         >
           {label}
         </div>

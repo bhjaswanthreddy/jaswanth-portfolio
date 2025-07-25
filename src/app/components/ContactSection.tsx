@@ -12,7 +12,12 @@ export default function ContactSection() {
       </p>
       <p>
         LinkedIn:{" "}
-        <a href={aboutData.linkedin} target="_blank" className="underline">
+        <a
+          href={aboutData.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
           {aboutData.linkedin.replace("https://", "")}
         </a>
       </p>

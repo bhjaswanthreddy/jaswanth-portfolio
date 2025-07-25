@@ -31,7 +31,7 @@ export default function Home() {
     <main className="relative h-screen w-screen bg-black font-mono overflow-hidden text-green-400 flex items-center justify-center px-4">
       {!commandExecuted && !jasbotTriggered ? (
         <div className="space-y-4 text-center">
-          <p className="text-lg">
+          <p className="text-lg font-medium tracking-wide">
             {typed}
             <span className="animate-pulse">|</span>
           </p>
